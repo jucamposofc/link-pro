@@ -1,2 +1,49 @@
 # link-pro
 Página profissional de links
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Partner | Links Oficiais</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="card">
+
+    <img src="https://via.placeholder.com/130" alt="Foto" class="avatar">
+
+    <h1>Partner</h1>
+    <p class="bio">Conteúdos, projetos e redes sociais 🚀</p>
+
+    <a href="https://instagram.com/seuperfil" target="_blank" class="btn instagram">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+
+    <a href="https://tiktok.com/@seuperfil" target="_blank" class="btn tiktok">
+      <i class="fab fa-tiktok"></i> TikTok
+    </a>
+
+    <a href="https://youtube.com/@seucanal" target="_blank" class="btn youtube">
+      <i class="fab fa-youtube"></i> YouTube
+    </a>
+
+    <a href="https://wa.me/55SEUNUMERO" target="_blank" class="btn whatsapp">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+
+    <footer>
+      <small>© 2025 Partner</small>
+    </footer>
+
+  </main>
+
+</body>
+</html>
