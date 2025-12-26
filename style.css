@@ -122,6 +122,10 @@ h1 {
   background: linear-gradient(135deg, #00f2ea, #000);
 }
 
+.kwai {
+  background: linear-gradient(135deg, #ff7a00, #ff5000);
+}
+
 .youtube {
   background: linear-gradient(135deg, #ff0000, #ff6a00);
 }
