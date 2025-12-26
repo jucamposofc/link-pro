@@ -7,69 +7,132 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background: radial-gradient(circle at top, #1a002b, #050014);
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
+/* Fundo animado estilo anime */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 0, 255, 0.15),
+    rgba(0, 255, 255, 0.15),
+    rgba(255, 255, 0, 0.15)
+  );
+  animation: animeBg 10s linear infinite;
+  z-index: -1;
+}
+
+@keyframes animeBg {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+/* Card principal */
 .card {
   width: 90%;
   max-width: 420px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
-  border-radius: 20px;
-  padding: 35px 25px;
+  background: rgba(20, 10, 40, 0.65);
+  backdrop-filter: blur(18px);
+  border-radius: 24px;
+  padding: 40px 25px;
   text-align: center;
-  color: white;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  color: #fff;
+  box-shadow:
+    0 0 25px rgba(255, 0, 255, 0.25),
+    0 0 60px rgba(0, 255, 255, 0.15);
+  border: 1px solid rgba(255,255,255,0.15);
 }
 
+/* Avatar */
 .avatar {
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  border: 3px solid white;
   margin-bottom: 15px;
+  border: 3px solid #ff4fd8;
+  box-shadow:
+    0 0 15px #ff4fd8,
+    0 0 30px rgba(255,79,216,0.6);
 }
 
+/* Textos */
 h1 {
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
 }
 
 .bio {
   font-size: 14px;
   opacity: 0.85;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 
+/* Botões anime */
 .btn {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 15px;
-  margin: 12px 0;
-  border-radius: 12px;
+  padding: 16px;
+  margin: 14px 0;
+  border-radius: 14px;
   text-decoration: none;
   color: white;
   font-size: 17px;
-  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+/* Glow animado */
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(120deg, #ff00ff, #00ffff, #ffff00);
+  opacity: 0.7;
+  filter: blur(10px);
+  z-index: -1;
+  animation: glow 4s linear infinite;
+}
+
+@keyframes glow {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
 }
 
 .btn:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
+  transform: scale(1.07);
 }
 
-.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
-.tiktok { background: black; }
-.youtube { background: #ff0000; }
-.whatsapp { background: #25d366; }
+/* Cores por rede */
+.instagram {
+  background: linear-gradient(135deg, #ff0080, #7928ca);
+}
 
+.tiktok {
+  background: linear-gradient(135deg, #00f2ea, #000);
+}
+
+.youtube {
+  background: linear-gradient(135deg, #ff0000, #ff6a00);
+}
+
+.whatsapp {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+}
+
+/* Rodapé */
 footer {
-  margin-top: 20px;
+  margin-top: 22px;
   font-size: 12px;
-  opacity: 0.7;
+  opacity: 0.6;
 }
